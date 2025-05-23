@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Udemy Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar input[type="text"] {
+      width: 50%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .navbar nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Menu Bar */
+    .menu-bar {
+      display: flex;
+      gap: 1rem;
+      background: #f7f7f7;
+      padding: 0.5rem 1rem;
+      overflow-x: auto;
+    }
+
+    /* Courses Section */
+    .section {
+      padding: 2rem 0;
+    }
+
+    .section h2 {
+      margin-bottom: 1rem;
+    }
+
+    .course-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .course {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .course img {
+      width: 100%;
+      height: auto;
+    }
+
+    .course-details {
+      padding: 0.5rem;
+    }
+
+    .course-details h4,
+    .course-details p {
+      margin: 0.5rem 0;
+    }
+
+    /* Topic Input */
+    .topic-input {
+      margin-top: 1rem;
+    }
+
+    .topic-input input {
+      padding: 0.5rem;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #333;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    /* Career Section */
+    .career-section {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .career-card {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      background-color: white;
+    }
+
+    .career-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hero-image {
+      position: relative;
+      height: 250px;
+      background-color: #f3f3f3;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-icon {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 60px;
+      height: auto;
+    }
+
+    .hero-icon img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-person {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-person img {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .career-card h3 {
+      font-size: 18px;
+      margin: 16px;
+      color: #333;
+    }
+
+    .career-card p {
+      font-size: 14px;
+      margin: 0 16px 16px;
+      color: #666;
+    }
+    .course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.course {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.course img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-details {
+  padding: 1rem;
+}
+
+.course-details h4,
+.course-details p {
+  margin: 0.5rem 0;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header class="navbar container">
+    <div class="logo">Udemy</div>
+    <input type="text" placeholder="Search for anything" />
+    <nav>
+      <a href="#">Categories</a>
+      <a href="#">Udemy Business</a>
+      <a href="#">Teach on Udemy</a>
+      <a href="#">Cart</a>
+    </nav>
+  </header>
+
+  <div class="menu-bar container">
+    <span>Development</span>
+    <span>Business</span>
+    <span>IT & Software</span>
+    <span>Design</span>
+    <span>Marketing</span>
+    <span>Personal Development</span>
+  </div>
+
+  <section class="career-section">
+    <div class="career-card">
+      <div class="hero-image">
+        <div class="hero-icon">
+          <img src="https://s.udemycdn.com/career-academies/careers/full-stack-web-developer/FSWD-M.svg" alt="Icon">
+        </div>
+        <div class="hero-person">
+          <img src="https://s.udemycdn.com/career-academies/careers/full-stack-web-developer/frontend-webdev-human.png" alt="Full Stack Web Developer">
+        </div>
+      </div>
+      <h3>Full Stack Web Developer</h3>
+      <p>$127,005 average salary (US) • 16,500 open roles (US)</p>
+    </div>
+
+    <div class="career-card">
+      <div class="hero-image">
+        <div class="hero-icon"> 
+                      <img src="https://s.udemycdn.com/career-academies/careers/digital-marketer/digitalmarketer-M.svg" alt="Icon">
+        </div>
+        <div class="hero-person">
+          <img src="https://s.udemycdn.com/career-academies/careers/digital-marketer/digital-marketer-human.png" alt="Digital Marketer">
+        </div>
+      </div>
+      <h3>Digital Marketer</h3>
+      <p>$61,126 average salary (US) • 36,600 open roles (US)</p>
+    </div>
+
+    <div class="career-card">
+      <div class="hero-image">
+        <div class="hero-icon">
+          <img src="https://s.udemycdn.com/career-academies/careers/data-scientist/datascientist-M.svg" alt="Icon">
+        </div>
+        <div class="hero-person">
+          <img src="https://s.udemycdn.com/career-academies/careers/data-scientist/data-scientist-person.png" alt="Data Scientist">
+        </div>
+      </div>
+      <h3>Data Scientist</h3>
+      <p>$126,629 average salary (US) • 20,100 open roles (US)</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2>Recommended Topics</h2>
+    <div class="topic-input">
+      <input type="text" placeholder="Suggest a topic..." />
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2>Popular Courses</h2>
+    <div class="course-list">
+      <div class="course">
+        <img src="https://engineering.fb.com/wp-content/uploads/2019/05/grid-AI.jpg" alt="Artificial Intelligence" />
+        <div class="course-details">
+          <h4>Artificial Intelligence</h4>
+          <p>⭐⭐⭐⭐⭐ (5.0)</p>
+        </div>
+      </div>
+  
+      <div class="course">
+        <img src="https://www.brynmawr.edu/sites/default/files/styles/hero_inside_lg/public/migrated-files/field/intro-image/Data%20Science%20Web%20Graphic%20v1.jpg.webp?itok=wdSc6Fde" alt="Data Science" />
+        <div class="course-details">
+          <h4>Data Science</h4>
+          <p>⭐⭐⭐⭐ (4.0)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <footer class="footer">
+    <p>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <a href="#">Careers</a>
+      <a href="#">Help and Support</a>
+    </p>
+    <p>&copy; 2025 Udemy Clone. All rights reserved.</p>
+  </footer>
+</body>
+</html>
